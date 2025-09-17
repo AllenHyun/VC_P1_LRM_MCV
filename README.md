@@ -152,7 +152,7 @@ bl[:,:,2] = g
 * OMES - Detección de colores en OpenCV: https://omes-va.com/deteccion-de-colores
 * Real Python - Image Segmentation Using Color Spaces in OpenCV + Python: https://realpython.com/python-opencv-color-spaces/?utm_source=chatgpt.com
 * Geeksforgeeks - Choosing the correct upper and lower HSV boundaries for color detection with 'cv::inRange' (OpenCV): https://www.geeksforgeeks.org/computer-vision/choosing-the-correct-upper-and-lower-hsv-boundaries-for-color-detection-with-cv-inrange-opencv/?utm_source=chatgpt.com
-* Documentación de OpenCV: https://docs.opencv.org/4.x/de/da9/tutorial_template_matching.html
+* Documentación de OpenCV: https://docs.opencv.org/4.x/
 * Geeksforgeeks - Python OpenCV | cv2.cvtColor() method: https://www.geeksforgeeks.org/python/python-opencv-cv2-cvtcolor-method
 * Aprende Con Alf - La librería Numpy: https://aprendeconalf.es/docencia/python/manual/numpy/#:~:text=la%20tupla%20dimensiones%20.-,np.,cuyos%20elementos%20son%20todos%20unos
 * Documentación de matplotlib: https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.imshow.html
