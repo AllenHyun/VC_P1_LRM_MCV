@@ -62,6 +62,34 @@ Se tiene que dejar una pequeña separación entre figuras para dar forma a las l
 
 <img width="425" height="418" alt="image" src="https://github.com/user-attachments/assets/58520cf3-3204-4719-a3b4-e34c5dcf25ba" />
 
+### 3. Hacer uso de las funciones de dibujo de OpenCV
+
+En esta tarea, simplemente hacemus uso de las distintas funciones de OpenCV para dibujar líneas y polígonos en 2D para crear varias figuras. En este caso, se han añadido polígonos y líneas de colores variados sobre un fondo negro.
+
+Se han usado funciones para crear figuras establecidas como rectángulos, circulos o líneas simples:
+
+```
+cv2.line(base, (0, size-1), (size-1, 0), (255, 255, 255), 5)
+cv2.rectangle(base, (150, 100), (350, 400), (0, 128, 128), -1)
+cv2.circle(base, (250, 250), 150, (255, 255, 255), 5)
+
+```
+Así como funciones para crear polígonos más complejos:
+``` 
+pts = np.array([[250, 0], [10, 200], [10, 300], [250, 499], [489, 300], [489, 200]], dtype=np.int32)  # Creamos el array de puntos
+pts = pts.reshape((-1, 1, 2))   # Convertimos el array al formato (nº vertices x 1 x 2)
+cv2.fillPoly(base, [pts], (128, 0, 128))
+```
+También se han creado formas tanto huecas (grosor 5 de línea) o rellenas (grosor -1):
+```
+cv2.rectangle(base, (150, 100), (350, 400), (0, 128, 128), -1)
+cv2.circle(base, (250, 250), 150, (255, 255, 255), 5)
+```
+
+### 4. Modificar un plano de la imagen
+
+En el caso de la cuarta tarea, hacemos uso de la cámara y dividimos dicha entrada de vídeo en tres planos correspondientes a los canales RGB
+
 ### 5. Destacar tanto el píxel con el color más claro como con el color más oscuro de una imagen.
 
 Para la quinta tarea, se volverá a hacer uso de la cámara, puesto que se necesitan buscar tanto el píxel más claro como oscuro captado. Tras iniciar el proceso de captura del vídeo, se obtienen los fotogramas con los que vamos a trabajar. Para poder trabajar cómodamente, se convierten los fotogramas de BGR a HSV.
