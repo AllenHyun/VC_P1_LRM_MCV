@@ -45,7 +45,7 @@ if (x//100 + y//100) % 2 == 0:
 
 Al ir alternando entre colores, finalmente da la imagen buscada, mostrándola con la función plt.imshow(). Se trata de una función de matplotlib.pylot que nos permite ver la imagen en cuestión.
 
-<img width="425" height="418" alt="image" src="https://github.com/user-attachments/assets/b061eda4-4bee-4557-a57f-318e53d942ed" />
+<img alt="example1" src="/Ejemplos/example1.png"/>
 
 
 ### 2. Crear una imagen con estilo Mondrian.
@@ -60,7 +60,7 @@ Lo que se hace es señalar que se pintará de un cuadrado que vaya en el eje y d
 
 Se tiene que dejar una pequeña separación entre figuras para dar forma a las líneas que están presente en el cuadro original.
 
-<img width="425" height="418" alt="image" src="https://github.com/user-attachments/assets/58520cf3-3204-4719-a3b4-e34c5dcf25ba" />
+<img alt="example2" src="/Ejemplos/example2.png"/>
 
 ### 3. Hacer uso de las funciones de dibujo de OpenCV
 
