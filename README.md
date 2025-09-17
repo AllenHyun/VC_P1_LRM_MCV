@@ -41,8 +41,6 @@ Para el tablero, usaremos dos bucles for para poder movernos entre cuadrados de 
 ```
 if (x//100 + y//100) % 2 == 0:
             black_img[y:y+100, x:x+100] = 255
-        else:
-            black_img[y:y+100, x:x+100] = 0
 ```
 
 Al ir alternando entre colores, finalmente da la imagen buscada, mostrándola con la función plt.imshow(). Se trata de una función de matplotlib.pylot que nos permite ver la imagen en cuestión.
