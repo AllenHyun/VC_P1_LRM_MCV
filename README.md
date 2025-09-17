@@ -28,10 +28,10 @@ import matplotlib.pyplot as plt
 
 ### 1. Crear una imagen con la textura de un juego de ajedrez.
 
-Para poder elaborar el tablero, será necesario definir sus dimensiones, es decir, su ancho y alto. Para la tarea, estos datos dan lugar a un rectángulo de 800x800. Para darle un color de fondo al rectángulo, se usará función np.
+Para poder elaborar el tablero, será necesario definir sus dimensiones, es decir, su ancho y largo. Para la tarea, estos datos dan lugar a un rectángulo de 800x800. Para darle un color de fondo al rectángulo, se usará función np.
 
 ```
-black_img = np.zeros((alto, ancho, 1), dtype= np.uint8)
+black_img = np.zeros((largo, ancho, 1), dtype= np.uint8)
 ```
 
 La función usada devuelve un nuevo array con el tamaño y tipo dado. Se le indica uint8 para indicar que es un tipo de dato que puede almacenar entre 0 y 255 (cosa que será usado cuando vayamos dando color a cada imagen). También se indica los canales, siendo en este caso solo 1.
