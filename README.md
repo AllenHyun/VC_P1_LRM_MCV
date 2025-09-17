@@ -90,7 +90,7 @@ cv2.circle(base, (250, 250), 150, (255, 255, 255), 5)
 
 ### 4. Modificar un plano de la imagen
 
-En el caso de la cuarta tarea, hacemos uso de la cámara y dividimos dicha entrada de vídeo en tres planos correspondientes a los canales RGB. A continuación, aplicamos ciertos efectos a uno de los planos, en este caso se ha elegido el plano verde (g):
+En el caso de la cuarta tarea, hacemos uso de la cámara y dividimos dicha entrada de vídeo en tres planos correspondientes a los canales RGB. A continuación, aplicamos ciertos efectos a uno de los planos, en este caso se ha elegido el plano verde (g, en el medio):
 
 ```
 # Modificamos uno de los planos
