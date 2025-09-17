@@ -86,9 +86,21 @@ cv2.rectangle(base, (150, 100), (350, 400), (0, 128, 128), -1)
 cv2.circle(base, (250, 250), 150, (255, 255, 255), 5)
 ```
 
+<img alt="example3" src="/Ejemplos/example3.png"/>
+
 ### 4. Modificar un plano de la imagen
 
-En el caso de la cuarta tarea, hacemos uso de la cámara y dividimos dicha entrada de vídeo en tres planos correspondientes a los canales RGB
+En el caso de la cuarta tarea, hacemos uso de la cámara y dividimos dicha entrada de vídeo en tres planos correspondientes a los canales RGB. A continuación, aplicamos ciertos efectos a uno de los planos, en este caso se ha elegido el plano verde (g):
+
+```
+# Modificamos uno de los planos
+g = 255 - g     # Invertimos el valor
+ruido = np.random.randint(0, 50, g.shape, dtype=np.uint8)
+g = cv2.add(g, ruido)   # Añadimos ruido
+g = cv2.GaussianBlur(g, (15, 15), 0)    # Añadimos desenfoque
+```
+
+<img alt="example4" src="/Ejemplos/example4.png"/>
 
 ### 5. Destacar tanto el píxel con el color más claro como con el color más oscuro de una imagen.
 
@@ -105,6 +117,35 @@ Para señalizar el píxel más claro, se dibujará un círculo azul (BGR, por es
 Se saldrá de la imagen pulsando la tecla ESC.
 
 <img width="1056" height="951" alt="image" src="https://github.com/user-attachments/assets/98fe22c4-6abc-4a54-a54f-0c0cc743df9d" />
+
+### 6. Hacer una propuesta de pop art con la entrada de la cámara web o vídeo
+
+Finalmente, para la tarea 6, volvemos a tomar la entrada de la cámara y creamos una cuadrícula de 3x3 con inspiración en la obra 'Marilyn' de Andy Warhol.
+
+```
+collage = np.zeros((h*3,w*3,3), dtype = np.uint8)
+```
+
+Para cada uno de los recuadros del 'collage' se ha elegido algún tipo de configuración para los distintos canales RGB (o BGR ya que estamos trabajando con OpenCV), invirtiendo o intercambiando los valores de los canales para dar lugar a imágenes con distintas tonalidades.
+
+```
+# Primera fila (recuadro izquierdo)
+tl[:,:,0] = b
+tl[:,:,1] = g
+tl[:,:,2] = r
+
+# Segunda fila (recuadro izquierdo)
+ml[:,:,0] = b
+ml[:,:,1] = r
+ml[:,:,2] = 255 - g
+
+# Tercera fila (recuadro izquierdo)
+bl[:,:,0] = r
+bl[:,:,1] = b
+bl[:,:,2] = g
+```
+
+<img alt="example6" src="/Ejemplos/example6.jpg"/>
 
 ## Referencias
 
