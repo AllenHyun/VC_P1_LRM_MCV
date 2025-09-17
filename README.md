@@ -64,4 +64,32 @@ Se tiene que dejar una pequeña separación entre figuras para dar forma a las l
 
 <img width="425" height="418" alt="image" src="https://github.com/user-attachments/assets/58520cf3-3204-4719-a3b4-e34c5dcf25ba" />
 
+### 5. Destacar tanto el píxel con el color más claro como con el color más oscuro de una imagen.
+
+Para la quinta tarea, se volverá a hacer uso de la cámara, puesto que se necesitan buscar tanto el píxel más claro como oscuro captado. Tras iniciar el proceso de captura del vídeo, se obtienen los fotogramas con los que vamos a trabajar. Para poder trabajar cómodamente, se convierten los fotogramas de BGR a HSV.
+
+```
+frameHSV = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+```
+
+Se buscan los píxeles en cuestión, siendo minVal el oscuro (su posición viene dada por minLoc) y maxVal el más claro (su posición viene dada por maxLoc). Para poder hacerlo, se hace uso de la función cv2.minMaxLoc, que justamente devuelve estos valores.
+
+Para señalizar el píxel más claro, se dibujará un círculo azul (BGR, por eso solo se puso 255 en el primer canal) que lo indique. Esta figura se irá actualizando con el tiempo para mostrar siempre el que detecte indicado. Por otro lado, se hará lo mismo con un círculo rojo para el oscuro.
+
+Se saldrá de la imagen pulsando la tecla ESC.
+
+<img width="1056" height="951" alt="image" src="https://github.com/user-attachments/assets/98fe22c4-6abc-4a54-a54f-0c0cc743df9d" />
+
+## Referencias
+
+* OMES - Detección de colores en OpenCV: https://omes-va.com/deteccion-de-colores
+* Real Python - Image Segmentation Using Color Spaces in OpenCV + Python: https://realpython.com/python-opencv-color-spaces/?utm_source=chatgpt.com
+* Geeksforgeeks - Choosing the correct upper and lower HSV boundaries for color detection with 'cv::inRange' (OpenCV): https://www.geeksforgeeks.org/computer-vision/choosing-the-correct-upper-and-lower-hsv-boundaries-for-color-detection-with-cv-inrange-opencv/?utm_source=chatgpt.com
+* Documentación de OpenCV: https://docs.opencv.org/4.x/de/da9/tutorial_template_matching.html
+* Geeksforgeeks - Python OpenCV | cv2.cvtColor() method: https://www.geeksforgeeks.org/python/python-opencv-cv2-cvtcolor-method
+* Aprende Con Alf - La librería Numpy: https://aprendeconalf.es/docencia/python/manual/numpy/#:~:text=la%20tupla%20dimensiones%20.-,np.,cuyos%20elementos%20son%20todos%20unos
+* Documentación de matplotlib: https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.imshow.html
+* OMES - Capturar, guardar y leer un video en OpenCV y Python: https://omes-va.com/basicvideo
+
+
 
