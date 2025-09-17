@@ -116,7 +116,7 @@ Para señalizar el píxel más claro, se dibujará un círculo azul (BGR, por es
 
 Se saldrá de la imagen pulsando la tecla ESC.
 
-<img width="1056" height="951" alt="image" src="https://github.com/user-attachments/assets/98fe22c4-6abc-4a54-a54f-0c0cc743df9d" />
+<img alt="example5" src="/Ejemplos/example5.png"/>
 
 ### 6. Hacer una propuesta de pop art con la entrada de la cámara web o vídeo
 
